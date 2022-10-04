@@ -1,0 +1,64 @@
+/* #body * {
+    border: 1px dashed blue;
+} */
+
+* {
+    font-family: sans-serif;
+}
+
+#body {
+    text-align: center;
+    padding: 0 10% 0 10%;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.conference {
+    color: #666;
+    font-weight: 100;
+}
+
+.author-list a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #219bef
+}
+.author-list a:hover {
+    text-decoration: underline;
+}
+
+.affiliation-list span {
+    font-size: 1.25rem;
+}
+
+.button-list {
+    margin-top: 1.5rem;
+}
+
+.button-list a {
+    margin:10px;
+    padding: .5rem;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 1.25rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.button-list a:hover {
+    background-color: white;
+    color: #333;
+}
+
+.button-list a img {
+    height: 1rem;
+    -webkit-filter: invert(100%);
+}
+.button-list a:hover img {
+    -webkit-filter: initial;
+}

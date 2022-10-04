@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+
+/body_models/*
+/checkpoints/*
+/data/*
+/logs/*
+/results/*
+/smpl/*.pkl
+/tmp/*
