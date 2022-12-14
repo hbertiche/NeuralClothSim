@@ -1,0 +1,35 @@
+{
+    "joint_names": {
+        "root": 0,
+        "L_hip": 1,
+        "R_hip": 2,
+        "back0": 3,
+        "L_knee": 4,
+        "R_knee": 5,
+        "back1": 6,
+        "L_ankle": 7,
+        "R_ankle": 8,
+        "back2": 9,
+        "L_toe": 10,
+        "R_toe": 11,
+        "neck": 12,
+        "L_inner_shoulder": 13,
+        "R_inner_shoulder": 14,
+        "head": 15,
+        "L_shoulder": 16,
+        "R_shoulder": 17,
+        "L_elbow": 18,
+        "R_elbow": 19,
+        "L_wrist": 20,
+        "R_wrist": 21,
+        "L_hand": 22,
+        "R_hand": 23
+    },
+    "body_parts" : {
+        "torso" : ["root", "back0", "back1", "back2", "neck", "L_inner_shoulder", "R_inner_shoulder", "head"],
+        "L_leg" : ["L_hip", "L_knee", "L_ankle", "L_toe"],
+        "R_leg" : ["R_hip", "R_knee", "R_ankle", "R_toe"],
+        "L_arm" : ["L_shoulder", "L_elbow", "L_wrist", "L_hand"],
+        "R_arm" : ["R_shoulder", "R_elbow", "R_wrist", "R_hand"]
+    }
+}

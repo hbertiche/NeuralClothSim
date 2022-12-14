@@ -1,0 +1,43 @@
+{
+    "experiment": {
+        "epochs": 5000,
+        "batch_size": 32,
+        "learning_rate": 1e-3,
+        "temporal_window_size": 0.5,
+        "reflect_probability": 0.0,
+        "motion_augmentation": 0.0,
+        "checkpoint": null
+    },
+    "body": {
+        "model": "mannequin",
+        "skeleton": "mixamo",
+        "input_joints": [0, 1, 2, 3, 4, 5, 7, 8, 9, 31, 32, 33, 55, 56, 60, 61]
+    },
+    "garment": {
+        "name": "tshirt",
+        "blend_weights_smoothing_iterations": 10
+    },
+    "data": {
+        "dataset": "mixamo",
+        "train": "toy.txt",
+        "validation": "toy.txt",
+        "test": "toy.txt",
+        "fps": 30
+    },
+    "model": {
+        "blend_weights_optimize": false
+    },
+    "loss": {
+        "cloth": {
+            "type": "baraff98",
+            "stretch": 10.0,
+            "shear": 1.0
+        },
+        "bending": 2e-5,
+        "collision_weight": 10.0,
+        "collision_threshold": 0.004,
+        "density": 0.15,
+        "pinning": 1e2,
+        "gravity": "-Y"
+    }
+}
