@@ -22,6 +22,9 @@ python train.py --config [CONFIG_FILE] --gpu_id [GPU_IDs]
 ```
 `[CONFIG_FILE]` is a path pointing to a JSON file with the configuration (See below for an explanation). There are two sample configuration files in `ncs/configs/`.<br>
 `[GPU_IDs]` is the IDs of the GPUs you want to use for training (e.g.: `0,1`).
+<br>
+
+During training, collision detection takes a significant amount of time. We allow parallelization by using <a href="https://www.ray.io/">Ray</a>. To do so, go to `ncs/model/ncs.py` line 102, where the collision detection layer is instanced and set `use_ray=True`. While this provides a significant boost in performance, we observed it might malfunction in some machines/OS.
 
 ### Predict
 
