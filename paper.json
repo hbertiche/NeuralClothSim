@@ -1,0 +1,30 @@
+{
+    "title": "Neural Cloth Simulation",
+    "conference": "SIGGRAPH Asia 2022",
+    "authors": [
+        {
+            "name": "Hugo Bertiche",
+            "email": "mailto:hugo_bertiche@hotmail.com",
+            "affiliations": [1, 2]
+        },
+        {
+            "name": "Meysam Madadi",
+            "email": "mailto:mmadadi@cvc.uab.cat",
+            "affiliations": [1, 2]
+        },
+        {
+            "name": "Sergio Escalera",
+            "email": "https://sergioescalera.com/",
+            "affiliations": [1, 2]
+        }
+    ],
+    "affiliations": ["Universitat de Barcelona", "Computer Vision Center"],
+    "URLs": {
+        "paper": "https://https://dl.acm.org/doi/10.1145/3550454.3555491",
+        "arxiv": null,
+        "youtube": "https://youtu.be/6HxXLBzRXFg",
+        "github": "https://github.com/hbertiche/NeuralClothSim",
+        "data": null
+    },
+    "abstract": "We present a general framework for the garment animation problem through unsupervised deep learning inspired in physically based simulation. Existing trends in the literature already explore this possibility. Nonetheless, these approaches do not handle cloth dynamics. Here, we propose the first methodology able to learn realistic cloth dynamics unsupervisedly, and henceforth, a general formulation for neural cloth simulation. The key to achieve this is to adapt an existing optimization scheme for motion from simulation based methodologies to deep learning. Then, analyzing the nature of the problem, we devise an architecture able to automatically disentangle static and dynamic cloth subspaces by design. We will show how this improves model performance. Additionally, this opens the possibility of a novel motion augmentation technique that greatly improves generalization. Finally, we show it also allows to control the level of motion in the predictions. This is a useful, never seen before, tool for artists. We provide of detailed analysis of the problem to establish the bases of neural cloth simulation and guide future research into the specifics of this domain."
+}

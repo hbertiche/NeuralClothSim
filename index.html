@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Neural Cloth SImulation</title>
+    <title></title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
     <div id="body">
-        <h1 class="title">Neural Cloth Simulation</h1>
-        <h3 class="conference">SIGGRAPH Asia 2022</h3>
-        <div class="author-list">
-            <span>
-                <a href="mailto:hugo_bertiche@hotmail.com">Hugo Bertiche</a><sup>1,2</sup>
-            </span>
-            <span>
-                <a href="mailto:mmadadi@cvc.uab.cat">Meysam Madadi</a><sup>1,2</sup>
-            </span>
-            <span>
-                <a href="mailto:sescalera@ub.edu">Sergio Escalera</a><sup>1,2</sup>
-            </span>
+        <h1 id="title"></h1>
+        <h3 id="conference"></h3>
+        <div id="author-list">
         </div>
-        <div class="affiliation-list">
-            <span><sup>1</sup>Universitat de Barcelona, </span>
-            <span><sup>2</sup>Computer Vision Center</span>
+        <div id="affiliation-list">
         </div>
-        <div class="button-list">
-            <a href="">
-                <img src="imgs/arXiv.svg">
+        <div id="button-list">
+            <a id="paper">
+                <img src="assets/logos/paper-icon.png">
+                <span>Paper</span>
+            </a>
+            <a id="arxiv">
+                <img src="assets/logos/arXiv.svg">
                 <span>arXiv</span>
             </a>
-            <a href="">
-                <img src="imgs/YouTube-logo.png">
+            <a id="youtube">
+                <img src="assets/logos/YouTube-logo.png">
                 <span>Video</span>
             </a>
-            <a href="">
-                <img src="imgs/GitHub-Mark-32px.png">
+            <a id="github">
+                <img src="assets/logos/GitHub-Mark-32px.png">
                 <span>GitHub</span>
             </a>
+            <a id="data">
+                <img src="assets/logos/data-icon.png">
+                <span>Dataset</span>
+            </a>
+        </div>
+        <div id="content">
+            <img src="assets/imgs/motivation.png">
+            <div id="abstract-container">
+                <h1>Abstract</h1>
+                <p id="abstract"></p>
+            </div>
+            <div id="video-container">
+                <h1>Summary</h1>
+                <iframe class="video" src="https://youtube.com/embed/iRbNlQHwbbA"></iframe>
+                <p style="text-align: center;">Find full slides <a href="assets/slides/NCS_Presentation.pdf">here</a>.</p>
+                <h1>Results</h1>
+                <iframe class="video" id="video"></iframe>
+            </div>
+            <div id="bibtex-container">
+                <h1>BibTeX</h1>
+                <div id="copy-button">
+                    <img src="assets/logos/copy-icon.png">
+                </div>
+                <pre id="bibtex">       @article{10.1145/3550454.3555491,
+                author = {Bertiche, Hugo and Madadi, Meysam and Escalera, Sergio},
+                title = {Neural Cloth Simulation},
+                year = {2022},
+                issue_date = {December 2022},
+                publisher = {Association for Computing Machinery},
+                address = {New York, NY, USA},
+                volume = {41},
+                number = {6},
+                issn = {0730-0301},
+                url = {https://doi.org/10.1145/3550454.3555491},
+                doi = {10.1145/3550454.3555491},
+                abstract = {We present a general framework for the garment animation problem through unsupervised deep learning inspired in physically based simulation. Existing trends in the literature already explore this possibility. Nonetheless, these approaches do not handle cloth dynamics. Here, we propose the first methodology able to learn realistic cloth dynamics unsupervisedly, and henceforth, a general formulation for neural cloth simulation. The key to achieve this is to adapt an existing optimization scheme for motion from simulation based methodologies to deep learning. Then, analyzing the nature of the problem, we devise an architecture able to automatically disentangle static and dynamic cloth subspaces by design. We will show how this improves model performance. Additionally, this opens the possibility of a novel motion augmentation technique that greatly improves generalization. Finally, we show it also allows to control the level of motion in the predictions. This is a useful, never seen before, tool for artists. We provide of detailed analysis of the problem to establish the bases of neural cloth simulation and guide future research into the specifics of this domain.},
+                journal = {ACM Trans. Graph.},
+                month = {nov},
+                articleno = {220},
+                numpages = {14},
+                keywords = {simulation, neural network, dynamics, cloth, unsupervised, disentangle, deep learning}
+        }</pre>
+            </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="text/javascript">
+        function set_slider(id) {
+            const root = document.getElementById(id);
+            const slidesContainer = root.querySelector(".slides-container");
+            const slide = root.querySelector(".slide");
+            const prevButton = root.querySelector(".slide-arrow-prev");
+            const nextButton = root.querySelector(".slide-arrow-next");
+            nextButton.addEventListener("click", (event) => {
+                const slideWidth = slide.clientWidth;
+                slidesContainer.scrollLeft += slideWidth;
+            });
+            prevButton.addEventListener("click", () => {
+                const slideWidth = slide.clientWidth;
+                slidesContainer.scrollLeft -= slideWidth;
+            });
+        }
+        set_slider("slider1");
+        set_slider("slider2");
+    </script>
 </body>
