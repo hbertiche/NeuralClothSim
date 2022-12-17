@@ -8,6 +8,9 @@
 
 * {
     font-family: sans-serif;
+}
+
+*:not(a) {
     color: var(--text-color);
 }
 
