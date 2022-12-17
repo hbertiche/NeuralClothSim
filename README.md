@@ -56,7 +56,7 @@ See the toy datasets provided as examples.
 
 ## Configuration files
 
-To allow experimentation using different 3D bodies, garments, fabrics, etc. we define the configuration of the experiments as JSON files. Here we describe the structure of these JSON files. We recommend looking at the provided configuration files as examples.
+To allow experimentation using different 3D bodies, garments, fabrics, etc. we define the configuration of the experiments as JSON files. Next we describe the structure of these JSON files. We additionally recommend looking at the provided configuration files as examples.
 
 ### Experiment
 
