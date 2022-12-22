@@ -21,7 +21,7 @@
     "affiliations": ["Universitat de Barcelona", "Computer Vision Center"],
     "URLs": {
         "paper": "https://https://dl.acm.org/doi/10.1145/3550454.3555491",
-        "arxiv": null,
+        "arxiv": "https://arxiv.org/abs/2212.11220",
         "youtube": "https://youtu.be/6HxXLBzRXFg",
         "github": "https://github.com/hbertiche/NeuralClothSim",
         "data": null
