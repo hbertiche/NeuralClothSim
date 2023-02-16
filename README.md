@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/hbertiche/hbertiche.github.io/main/imgs/publications/NCS.png">
 
-<a href="hbertiche.github.io/NeuralClothSim">Project Page</a> | <a href="https://dl.acm.org/doi/10.1145/3550454.3555491">Paper</a> | <a href="">arXiv</a> | <a href="https://youtu.be/6HxXLBzRXFg">Video 1</a> | <a href="https://youtu.be/iRbNlQHwbbA">Video 2</a>
+<a href="https://hbertiche.github.io/NeuralClothSim">Project Page</a> | <a href="https://dl.acm.org/doi/10.1145/3550454.3555491">Paper</a> | <a href="https://arxiv.org/abs/2212.11220">arXiv</a> | <a href="https://youtu.be/6HxXLBzRXFg">Video 1</a> | <a href="https://youtu.be/iRbNlQHwbbA">Video 2</a>
 
 ### Abstract
 
