@@ -28,10 +28,10 @@ def main(config):
     # Remove previous runs logs and checkpoints for this experiment
     log_dir = os.path.join(LOGS_DIR, config.name)
     checkpoint_dir = os.path.join(CHECKPOINTS_DIR, config.name)
-    if os.path.isdir(log_dir):
-        rmtree(log_dir)
-    if os.path.isdir(checkpoint_dir):
-        rmtree(checkpoint_dir)
+    if os.path.isdir(log_dir) or os.path.isdir(checkpoint_dir):
+        print(f"There already are logs/checkpoints for an experiment with the same name. Experiment name: {config.name}")
+        print("Please remove or rename the logs/checkpoints. Alternatively, rename the experiment (JSON file name).")
+        return
 
     print("Initializing model...")
     if len(gpus) > 1:
