@@ -63,7 +63,7 @@ To run the scripts, from `mixamo_processing/` folder, run:
 blender --python get_body_model.py
 blender --python get_sequence.py
 ```
-Blender is required (Tested in Blender 3.0).
+Blender is required (Tested in Blender 3.0).<br>
 The script `get_body_model.py` expects a `FBX` file containing the 3D character in rest pose (T-pose). The script `get_sequence.py` expects a `FBX` file with the sequence data. I recommend downloading sequences from Mixamo _without_ skin. File size and processing times will be lower.<br>
 Note that the input `FBX` files and output paths are hard-coded at the end of each script. Modify as required.
 
