@@ -54,6 +54,19 @@ To neurally simulate cloth on top of a 3D character, we need pose sequence data.
 Pose sequence datasets should be placed in `data/[DATASET_NAME]/`.<br>
 See the toy datasets provided as examples.
 
+## Mixamo
+
+Characters and pose sequences obtained from <a href="https://www.mixamo.com/#/">Mixamo</a> are provided as `FBX` files. In order to convert them into a format usable by this code, I included some scripts in `mixamo_processing/`. Mixamo contains a huge number of characters and sequences. These scripts have not been thoroughly tested. Ensure the results obtained are consistent before using them for training.
+
+To run the scripts, from `mixamo_processing/` folder, run:
+```
+blender --python get_body_model.py
+blender --python get_sequence.py
+```
+Blender is required (Tested in Blender 3.0).
+The script `get_body_model.py` expects a `FBX` file containing the 3D character in rest pose (T-pose). The script `get_sequence.py` expects a `FBX` file with the sequence data. I recommend downloading sequences from Mixamo _without_ skin. File size and processing times will be lower.<br>
+Note that the input `FBX` files and output paths are hard-coded at the end of each script. Modify as required.
+
 ## Configuration files
 
 To allow experimentation using different 3D bodies, garments, fabrics, etc. we define the configuration of the experiments as JSON files. Next we describe the structure of these JSON files. We additionally recommend looking at the provided configuration files as examples.
