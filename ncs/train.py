@@ -20,6 +20,7 @@ def make_model(config):
     model.compile(optimizer=optimizer)
     if config.experiment.checkpoint is not None:
         checkpoint_path = os.path.join(CHECKPOINTS_DIR, config.experiment.checkpoint)
+        print(checkpoint_path)
         model.load_weights(checkpoint_path)
     return model
 

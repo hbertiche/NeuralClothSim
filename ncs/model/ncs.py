@@ -13,14 +13,15 @@ from global_vars import BODY_DIR
 
 class NCS(tf.keras.Model):
     def __init__(self, config, **kwargs):
-        super().__init__(**kwargs)
+        
+        super().__init__(**kwargs) #继承tf.keras.Model类
         self.config = config
-        folder = os.path.join(BODY_DIR, config.body.model)
-        body_model = os.path.join(folder, "body.npz")
-        garment_obj = os.path.join(folder, config.garment.name)
+        folder = os.path.join(BODY_DIR, config.body.model)# /body_models/smpl_female_neutral
+        body_model = os.path.join(folder, "body.npz")# /body_models/smpl_female_neutral/body.npz
+        garment_obj = os.path.join(folder, config.garment.name)# /body_models/smpl_female_neutral/tshirt
         # Read body
         print("Reading body model...")
-        self.body = Body(body_model, input_joints=config.body.input_joints)
+        self.body = Body(body_model, input_joints=config.body.input_joints)#处理Body类数据结构
         # Read garment
         print("Reading garment...")
         self.garment = Garment(garment_obj)

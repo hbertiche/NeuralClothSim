@@ -11,21 +11,26 @@ from utils.mesh import triangulate
 
 
 class Body:
+    '''
+    定义基础人体模型
+
+    '''
     def __init__(self, body_model, input_joints=None):
         self.body_model = body_model
         # Read body model
         with np.load(body_model) as model:
             self.vertices = model["vertices"]
-            self.faces = triangulate(model["faces"])
+            self.faces = triangulate(model["faces"]) #三角化
             self.blend_weights = model["blend_weights"].astype(np.float32)
             self.joints = np.float32(model["joints"])
             self.rest_pose = model["rest_pose"]
             self.parents = model["parents"]
+            #parents[i]表示第i个关节的父关节的索引，如果没有父关节，则为-1
             if "no_collide_vertices" in model:
                 self.no_collide_vertices = model["no_collide_vertices"]
                 assert not set(self.collision_vertices) == set(
                     range(self.num_verts)
-                ), "Error! There is no collision vertices."
+                ), "Error! There is no collision vertices."  #检验是否将点都设置为了非碰撞顶点
         self.input_joints = input_joints or list(range(self.num_joints))
         self.tree_to_depth()
         # Infer rotation mode ('axis_angle' or 'quaternion')

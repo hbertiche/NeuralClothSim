@@ -8,6 +8,7 @@ from global_vars import NUM_JOINTS, GRAVITY
 class Config:
     def __init__(self, path_or_dict):
         if isinstance(path_or_dict, str):
+            print(path_or_dict )
             assert os.path.isfile(
                 path_or_dict
             ), "Config class error: JSON config file does not exist."

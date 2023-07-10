@@ -5,10 +5,17 @@ from scipy.sparse import coo_matrix
 from utils.tensor import tf_shape
 
 
-def triangulate(faces):
+def triangulate(faces): #三角化
     triangles = np.int32(
-        [triangle for polygon in faces for triangle in _triangulate_recursive(polygon)]
+        [triangle for polygon in faces for triangle in _triangulate_recursive(polygon)]# 提取faces三角化为列表
     )
+    ''' 
+    # 等效于下面的代码
+        triangles = []
+        for polygon in faces:
+            for triangle in _triangulate_recursive(polygon):
+                triangles.append(triangle)
+    '''
     return triangles
 
 
@@ -16,8 +23,9 @@ def _triangulate_recursive(face):
     if len(face) == 3:
         return [face]
     else:
-        return [face[:3]] + _triangulate_recursive([face[0], *face[2:]])
-
+        return [face[:3]] + _triangulate_recursive([face[0], *face[2:]]) # *表示解包元素并合并# 
+                                                                         # 等效于facep[0]+face[2:]
+        #第一个顶点与其余顶点中两个顶点组合为三角形
 
 def faces_to_edges_and_adjacency(faces):
     edges = dict()
